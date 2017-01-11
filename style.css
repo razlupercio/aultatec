@@ -1,0 +1,54 @@
+/*
+body{
+background-color:red;
+}
+*/
+
+#container {
+  position:relative;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#header {
+  position: fixed;
+  height:60px;
+  top:0;
+  width:960px;
+  background-color:green;
+}
+#content{
+  top:0px;
+  position: absolute; 
+  width: 600px;   
+}
+#sidebar{
+    margin-top:100px;
+    margin-left:600px;
+}
+
+#parrafo{
+    background-color:orange;
+    color:blue;
+}
+#parrafo:hover{
+    background-color:purple;
+    color:red;  
+}
+
+#parrafo:active{
+    background-color:red;
+    color:green;  
+}
+
+.yellow:focus{
+    background-color:yellow;
+}
+
+#content img {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+
+

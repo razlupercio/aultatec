@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset='UTF-8'>
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+</head>
+<body>
+<div id='context'></div>
+
+<script>
+	var gretter = function() {
+		console.log('Hello, nice to meet you.')
+	}
+
+	function getDate(){
+		//console.log(new Date())
+		document.querySelector('body').innerHTML ='<p>'+ Date()+ '</p>'
+	}
+
+	function output(){
+	//document.querySelector('body').textContent = 'Hodfsdla';
+	$('#context').append('<p>nuevo texto!</p>')
+	}
+
+
+var saying_generator = function () {
+  var phrase = "Heeey, " + "it's the " + " Fonz."
+  return phrase
+}
+
+// What is the return value?
+var saying = saying_generator()
+
+var broken_saying_generator = function () {
+  var phrase = "Heeey, " + "it's the " + " Fonz."
+  phrase
+}
+
+// What about now?
+var broken_saying = broken_saying_generator()
+
+
+var getRandom = function(){
+	var random = Math.random()*2+1;
+	return Math.round(random);
+}
+
+
+var inspector = function () {
+  console.log(arguments)
+}
+
+// try each invocation individually and ponder the result
+inspector(3)
+
+inspector(3 + 7)
+inspector(3, 7)
+
+inspector("hello")
+inspector("hello" + " " + "how are you")
+inspector("hello", "how are you")
+
+inspector("hello", 7, true, undefined, null, 3 + 12, "nice to" + " meet you")
+</script>
+</body>
+</html>

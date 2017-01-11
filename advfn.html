@@ -1,0 +1,38 @@
+<html>
+	<head><script src="https://code.jquery.com/jquery-2.1.1.js"></script></head>
+	<body>
+	<div id="answer"></div>
+		<script>
+		// las funciones son variables
+		var say_hi = function () {
+		  console.log('hi')
+		}
+		// podemos asignar funciones como variables
+		var greeter = say_hi
+
+
+
+
+		say_hi = function () {
+		  console.log('meh')
+		}
+
+		say_hi() // ??
+		greeter() // ??
+
+		//y podemos pasar esas funciones 
+		//como parametros de otras funciones  
+		var runner = function (fn) { //fn es la funcion que será ejecutada...
+		  console.log('Invoking a function now!')
+		  fn() // aquí!
+		}
+
+		//escribe una función que tome como 
+		//parámetro otra función
+		// e imprima el resultado de la función que 
+		//toma como parametro al div#answer
+
+		</script>		
+	</body>	
+</html>
+

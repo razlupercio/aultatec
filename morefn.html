@@ -1,0 +1,76 @@
+<html>
+	<head><script src="https://code.jquery.com/jquery-2.1.1.js"></script></head>
+	<body>
+	<div id="answer"></div>
+		<script>
+		/*
+			aparte de ser tomadas como parametros
+			también podemos devolver funciones como
+			resultado de una llamada a determinada función
+			ejemplo:
+		*/
+
+			var returns_a_func = function () {
+			  return function(){ console.log('BOOP!') }
+			}
+
+			var booper = returns_a_func()
+
+			booper() //		
+
+			/*
+
+				normalmente las variables que definimos dentro 
+				del bloque de la función no están disponibles 
+				para el resto del código pero las fn's sí pueden
+				acceder a variables fuera de su bloque. Ejemplo:
+			*/	
+
+			var publicString = "Public"
+
+			function keepSecret(){
+				var topSecret = "Shht! "
+				var thisIsPublic = "It's a secret "
+				var thisAlsoIsPublic = "Don't tell anyone "
+				console.log(thisIsPublic + topSecret + thisAlsoIsPublic)
+			}
+
+
+			var word = 'original'
+			var phrase = " is the word"
+
+			//inicia primer bloque de ejemplo
+
+			/*
+			var word_changer = function (new_word) {
+			    var word = new_word
+			    console.log(word + phrase)
+			}
+
+			console.log(word + phrase) // ??
+			console.log(new_word + phrase) // ??
+			word_changer('changed')
+			console.log(word + phrase) // ??
+			console.log(new_word + phrase) // ??
+			*/
+
+			//termina primer bloque de ejemplo
+
+			//inicia segundo bloque de ejemplo
+
+			// what's different here?
+			/*
+			var leaky_word_changer = function (new_word) {
+			    word = new_word
+			    console.log(word + phrase)
+			}
+
+			leaky_word_changer('changed')
+			console.log(word + phrase) // ??
+			console.log(new_word + phrase) // ??
+			*/
+
+			//termina segundo bloque de ejemplo
+		</script>		
+	</body>	
+</html>

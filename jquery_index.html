@@ -1,0 +1,65 @@
+
+<html>
+<head>
+  <title>HTML Document</title>
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+</head>
+<body>
+<div id="everything">
+      <h1>A heading!</h1>
+      <p>Here's some text!</p>
+      <p>Here's a second set of text!</p>
+      <div class="holder">
+          <ul>
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+          </ul>
+      </div>
+    <div class="holder">
+          <ol>
+              <li>List Item 4</li>
+              <li>List Item 5</li>
+              <li>List Item 6</li>
+          </ol>
+      </div>
+      <div id="change-me">This part needs to change!</div>
+      <div id="secret">We should hide this!</div>
+  </div>
+
+  <script>
+  //var tema = prompt('Elige el tema para la página web (red, green, blue)?');
+  var tema = '';
+
+if (tema != 'red' || tema != 'blue' || tema != 'green') {
+  while(true){
+    tema = prompt('Elige el tema para la página web (red, green, blue)?');
+    }
+};
+
+
+
+  
+  alert('el color de tema elegido es '+tema); 
+
+  //var a = 4;
+  //console.log(a)
+  $('h1').css('color', 'blue');
+  $('body').css('background-color', 'light-gray');
+  $('#everything').css('font-size', '125%');
+  $('.holder').css('border', '1px solid black');
+  $('.efecto ul li').css('font-weight', 'bold');
+  $('h1 + p').css('color', 'green');
+  $('#secret').css('display', 'block');
+  $('#change-me').text('Changed! ');
+  $('#change-me').append('more text!');
+  $('#change-me').html('<p>Parrafo 1</p><p>Parrafo 2</p>');
+  $('#change-me').append('<p>nuevo parrafo</p>');
+  $('li').text('nueva sentencia   ');
+  $('li').append('nuevo texto');
+  $('#everything').append('<ol><li>item x</li><li>item y</li><li>item z</li></ol>');
+  $('#change-me').fadeIn();
+
+  </script>
+</body>
+</html>
